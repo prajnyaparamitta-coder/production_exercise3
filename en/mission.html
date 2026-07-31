@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Our mission: to move from simply showing animals to thinking about the future of animals and nature together."
+        />
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="icon" href="../images/favicon.ico" />
+        <title>Mission｜Hokkaido ○○ Zoo</title>
+    </head>
+
+    <body id="top">
+        <!-- ===== Header (shared across pages) ===== -->
+        <header class="header">
+            <a class="header__logo" href="index.html">
+                <span class="header__logo-mark" aria-hidden="true">
+                    <img src="../images/polarbear.svg" alt="Hokkaido ○○ Zoo" class="header__logo-img" />
+                </span>
+                <span class="header__logo-text">Hokkaido ○○ Zoo</span>
+            </a>
+
+            <div class="header__actions">
+                <!-- Ticket CTA -->
+                <button class="header__ticket" commandfor="ticket-dialog" command="show-modal">
+                    Tickets
+                </button>
+                <a class="header__lang" href="../mission.html">JP</a>
+                <button
+                    class="header__theme"
+                    type="button"
+                    aria-label="テーマを切り替え"
+                >
+                    <span class="header__theme-icon" aria-hidden="true">◐</span>
+                </button>
+                <button
+                    class="header__toggle"
+                    type="button"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                    aria-controls="global-nav"
+                >
+                    <span class="header__toggle-bar"></span>
+                    <span class="header__toggle-bar"></span>
+                    <span class="header__toggle-bar"></span>
+                </button>
+            </div>
+
+            <nav class="header__nav" id="global-nav">
+                <ul class="header__menu">
+                    <li class="header__item"><a href="guide.html">Visit</a></li>
+                    <li class="header__item"><a href="index.html#animals">Animals</a></li>
+                    <li class="header__item"><a href="ecology.html">Animal Life</a></li>
+                    <li class="header__item"><a href="mission.html">Mission</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- ===== Page heading ===== -->
+            <section class="page-head">
+                <img src="../images/hero_mission.webp" alt="" class="page-head__img" />
+                <div class="page-head__body">
+                    <h1 class="page-head__title">Our Mission</h1>
+                    <p class="page-head__lead">
+                        To be a place where you meet the animals and think about the future of nature.
+                    </p>
+                </div>
+            </section>
+
+            <!-- ===== Body ===== -->
+            <section class="page-section page-section--media">
+                <div class="page-section__body">
+                    <h2 class="page-section__title">From a Zoo That Shows, to a Zoo That Thinks</h2>
+                    <p class="page-section__text">
+                        Until now, we have brought visitors the sight of the many animals that live in the northern land. Yet simply gazing at rare creatures through a pane of glass may make it hard to notice the wider environment they truly inhabit, or the changes taking place there.
+                    </p>
+                    <p class="page-section__text">
+                        What Hokkaido ○○ Zoo aims for is not merely a place that "shows" animals. It is a shift toward a zoo where we think together — reflecting on the background each animal has come from, and how people and nature should face one another from here. A polar bear swimming in the cold icy sea, the breath of a sika deer living deep in the forest — they teach us the unshakable fact that we share the same planet's environment.
+                    </p>
+                </div>
+                <img src="../images/mission1.webp" alt="" class="page-section__figure" />
+            </section>
+
+            <section class="page-section page-section--media page-section--reverse">
+                <div class="page-section__body">
+                    <h2 class="page-section__title">Our Efforts</h2>
+                    <p class="page-section__text">
+                        To realize a "zoo that thinks," we go beyond the daily optimization of husbandry and focus on enrichment that draws out the animals' natural, wild behavior. Creating spaces where they can live vividly and without boredom is an essential foundation for letting visitors feel their natural ways and beauty just as they are.
+                    </p>
+                    <p class="page-section__text">
+                        We also work on breeding for species conservation, and on education and outreach that convey the current state of the northern ecosystem. By sharing the discoveries found in daily observation and unraveling the stories behind the animals' lives, we keep building an environment where a small realization can take root in each visitor's heart.
+                    </p>
+                </div>
+                <img src="../images/mission2.webp" alt="" class="page-section__figure" />
+            </section>
+
+            <section class="page-section page-section--media">
+                <div class="page-section__body">
+                    <h2 class="page-section__title">To Our Visitors</h2>
+                    <p class="page-section__text">
+                        When you pass through the gate and feel the breath of the northern animals, your imagination may suddenly reach out — to the nature beneath your own feet, and to distant worlds. We hope to be a place where a quiet, rich time flows, for grown-ups too.
+                    </p>
+                    <p class="page-section__text">
+                        As a weekend moment with family or someone dear, or as a quiet walk to face yourself — we sincerely hope that a small encounter at this zoo becomes the key that opens a new door connecting you and the future of nature.
+                    </p>
+                </div>
+                <img src="../images/mission3.webp" alt="" class="page-section__figure" />
+            </section>
+        </main>
+
+        <dialog id="ticket-dialog" class="ticket-dialog">
+            <button
+                class="ticket-dialog__close"
+                command="close"
+                commandfor="ticket-dialog"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+            <h2 class="ticket-dialog__title">Buy Tickets</h2>
+            <p class="ticket-dialog__note">Please select the number of tickets.</p>
+
+            <div class="ticket-dialog__rows">
+                <div class="ticket-row">
+                    <span class="ticket-row__name">Adult (high school and over)</span>
+                    <span class="ticket-row__price">¥1,000</span>
+                    <input
+                        class="ticket-row__qty"
+                        type="number"
+                        min="0"
+                        value="0"
+                        data-price="1000"
+                    />
+                </div>
+                <div class="ticket-row">
+                    <span class="ticket-row__name">Child (elementary/junior high)</span>
+                    <span class="ticket-row__price">¥400</span>
+                    <input
+                        class="ticket-row__qty"
+                        type="number"
+                        min="0"
+                        value="0"
+                        data-price="400"
+                    />
+                </div>
+            </div>
+
+            <p class="ticket-dialog__total">Total: ¥<span id="ticket-total">0</span></p>
+
+            <button class="ticket-dialog__submit" type="button">Proceed to checkout</button>
+        </dialog>
+
+        <!-- ===== Companion bear (shared across pages) ===== -->
+        <a class="bear" href="#top" aria-label="Return to top of page">
+            <img src="../images/polarbear.svg" alt="" class="bear__img" />
+            <span class="bear__label">TOP ↑</span>
+        </a>
+
+        <footer class="footer">
+            <p class="footer__copy">&copy; Hokkaido ○○ Zoo</p>
+            <p class="footer__note">All images on this site are AI-generated.</p>
+        </footer>
+
+        <script src="../js/main.js"></script>
+    </body>
+</html>

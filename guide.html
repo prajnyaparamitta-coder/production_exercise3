@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Plan your visit to our zoo in Hokkaido. Opening hours, admission, access and park map."
+        />
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="images/favicon.ico" />
+        <title>来園案内｜北海道○○動物園</title>
+    </head>
+
+    <body id="top">
+        <!-- ===== ヘッダー（全ページ共通） ===== -->
+        <header class="header">
+            <a class="header__logo" href="index.html">
+                <span class="header__logo-mark" aria-hidden="true">
+                    <img src="images/polarbear.svg" alt="北海道○○動物園" class="header__logo-img" />
+                </span>
+                <span class="header__logo-text">北海道○○動物園</span>
+            </a>
+
+            <div class="header__actions">
+                <!-- チケット常駐CTA -->
+                <button class="header__ticket" commandfor="ticket-dialog" command="show-modal">
+                    チケット
+                </button>
+                <a class="header__lang" href="en/guide.html">EN</a>
+                <button
+                    class="header__theme"
+                    type="button"
+                    aria-label="テーマを切り替え"
+                >
+                    <span class="header__theme-icon" aria-hidden="true">◐</span>
+                </button>
+                <button
+                    class="header__toggle"
+                    type="button"
+                    aria-label="メニューを開く"
+                    aria-expanded="false"
+                    aria-controls="global-nav"
+                >
+                    <span class="header__toggle-bar"></span>
+                    <span class="header__toggle-bar"></span>
+                    <span class="header__toggle-bar"></span>
+                </button>
+            </div>
+
+            <nav class="header__nav" id="global-nav">
+                <ul class="header__menu">
+                    <li class="header__item"><a href="guide.html">来園案内</a></li>
+                    <li class="header__item"><a href="index.html#animals">動物紹介</a></li>
+                    <li class="header__item"><a href="ecology.html">動物たちの暮らし</a></li>
+                    <li class="header__item"><a href="mission.html">理念</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- ===== ページ見出し（全下層ページ共通の型） ===== -->
+            <section class="page-head">
+                <img src="images/hero_guide.webp" alt="" class="page-head__img" />
+                <div class="page-head__body">
+                    <h1 class="page-head__title">来園案内</h1>
+                    <p class="page-head__lead">
+                        北の大地の空気を感じながら、動物たちと静かに出会うための準備をここで。
+                    </p>
+                </div>
+            </section>
+
+            <!-- ===== 開園時間・休園日 ===== -->
+            <section class="page-section page-section--media">
+                <div class="page-section__body">
+                    <h2 class="page-section__title">開園時間・休園日</h2>
+                    <p class="page-section__text">
+                        季節の移り変わりとともに、北の動物たちの表情や活動する時間も少しずつ姿を変えます。澄んだ空気に包まれる朝の静寂や、夕暮れ前のやわらかな光の中で過ごす動物たちの姿は、いつ訪れても新鮮な発見に満ちています。ご予定に合わせて、ゆとりを持ったスケジュールでお越しください。
+                    </p>
+                    <dl class="info-list">
+                        <div class="info-list__item">
+                            <dt class="info-list__label">開園時間</dt>
+                            <dd class="info-list__desc">
+                                9:00 – 18:00（最終入園 17:00）<br />
+                                冬期（11月～3月）は 9:00 – 16:30（最終入園 16:00）
+                            </dd>
+                        </div>
+                        <div class="info-list__item">
+                            <dt class="info-list__label">休園日</dt>
+                            <dd class="info-list__desc">
+                                毎週水曜日（祝日の場合は翌平日）<br />
+                                年末年始（12月29日～1月3日）
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+                <img src="images/guide1.webp" alt="" class="page-section__figure" />
+            </section>
+
+            <!-- ===== 入園料金 ===== -->
+            <section class="page-section page-section--media page-section--reverse">
+                <div class="page-section__body">
+                    <h2 class="page-section__title">入園料金</h2>
+                    <p class="page-section__text">
+                        チケットは窓口でのご購入のほか、スマートフォンから事前に購入できるWEBチケットもご用意しています。当日スムーズにゲートを通過できるため、週末のお出かけやご家族でのご来園にぜひご活用ください。
+                    </p>
+                    <table class="fee-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">区分</th>
+                                <th scope="col">個人</th>
+                                <th scope="col">団体（20名以上）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">大人（高校生以上）</th>
+                                <td>1,000円</td>
+                                <td>800円</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">小・中学生</th>
+                                <td>400円</td>
+                                <td>320円</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">未就学児</th>
+                                <td>無料</td>
+                                <td>無料</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="page-section__note">
+                        障害者手帳をお持ちの方と介助者1名は無料です。受付にてご提示ください。
+                    </p>
+                </div>
+                <img src="images/guide2.webp" alt="" class="page-section__figure" />
+            </section>
+
+            <!-- ===== 園内マップ（本文＋マスコット） ===== -->
+            <section class="page-section page-section--media">
+                <div class="page-section__body">
+                    <h2 class="page-section__title">園内マップ</h2>
+                    <p class="page-section__text">
+                        園内は大きく4つのエリアに分かれており、北の環境を再現したゆとりある設計になっています。急いですべての動物を見て回る必要はありません。木々のざわめきや動物たちの息づかいを感じながら、お気に入りの場所で足を止め、自分だけのペースでゆっくりと散策をお楽しみください。
+                    </p>
+                </div>
+                <img src="images/guide3.webp" alt="" class="page-section__figure" />
+            </section>
+
+            <!-- ===== 園内マップ画像（全幅・セクション外） ===== -->
+            <img src="images/park-map.webp" alt="園内マップ" class="park-map" />
+        </main>
+
+        <dialog id="ticket-dialog" class="ticket-dialog">
+            <button
+                class="ticket-dialog__close"
+                command="close"
+                commandfor="ticket-dialog"
+                aria-label="閉じる"
+            >
+                ×
+            </button>
+
+            <h2 class="ticket-dialog__title">チケット購入</h2>
+            <p class="ticket-dialog__note">ご希望の枚数を選択してください。</p>
+
+            <div class="ticket-dialog__rows">
+                <div class="ticket-row">
+                    <span class="ticket-row__name">大人（高校生以上）</span>
+                    <span class="ticket-row__price">1,000円</span>
+                    <input
+                        class="ticket-row__qty"
+                        type="number"
+                        min="0"
+                        value="0"
+                        data-price="1000"
+                    />
+                </div>
+                <div class="ticket-row">
+                    <span class="ticket-row__name">小・中学生</span>
+                    <span class="ticket-row__price">400円</span>
+                    <input
+                        class="ticket-row__qty"
+                        type="number"
+                        min="0"
+                        value="0"
+                        data-price="400"
+                    />
+                </div>
+            </div>
+
+            <p class="ticket-dialog__total">合計：<span id="ticket-total">0</span>円</p>
+
+            <button class="ticket-dialog__submit" type="button">購入手続きへ進む</button>
+        </dialog>
+
+        <!-- ===== クマ（全ページ共通） ===== -->
+        <a class="bear" href="#top" aria-label="ページトップへ戻る">
+            <img src="images/polarbear.svg" alt="" class="bear__img" />
+            <span class="bear__label">TOP ↑</span>
+        </a>
+
+        <footer class="footer">
+            <p class="footer__copy">&copy; 北海道○○動物園</p>
+            <p class="footer__note">All images on this site are AI-generated.</p>
+        </footer>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Plan your visit to our zoo in Hokkaido. Opening hours, admission, access and park map."
+        />
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="icon" href="../images/favicon.ico" />
+        <title>Visit｜Hokkaido ○○ Zoo</title>
+    </head>
+
+    <body id="top">
+        <!-- ===== Header (shared across pages) ===== -->
+        <header class="header">
+            <a class="header__logo" href="index.html">
+                <span class="header__logo-mark" aria-hidden="true">
+                    <img src="../images/polarbear.svg" alt="Hokkaido ○○ Zoo" class="header__logo-img" />
+                </span>
+                <span class="header__logo-text">Hokkaido ○○ Zoo</span>
+            </a>
+
+            <div class="header__actions">
+                <!-- Ticket CTA -->
+                <button class="header__ticket" commandfor="ticket-dialog" command="show-modal">
+                    Tickets
+                </button>
+                <a class="header__lang" href="../guide.html">JP</a>
+                <button
+                    class="header__theme"
+                    type="button"
+                    aria-label="テーマを切り替え"
+                >
+                    <span class="header__theme-icon" aria-hidden="true">◐</span>
+                </button>
+                <button
+                    class="header__toggle"
+                    type="button"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                    aria-controls="global-nav"
+                >
+                    <span class="header__toggle-bar"></span>
+                    <span class="header__toggle-bar"></span>
+                    <span class="header__toggle-bar"></span>
+                </button>
+            </div>
+
+            <nav class="header__nav" id="global-nav">
+                <ul class="header__menu">
+                    <li class="header__item"><a href="guide.html">Visit</a></li>
+                    <li class="header__item"><a href="index.html#animals">Animals</a></li>
+                    <li class="header__item"><a href="ecology.html">Animal Life</a></li>
+                    <li class="header__item"><a href="mission.html">Mission</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- ===== Page heading (shared layout) ===== -->
+            <section class="page-head">
+                <img src="../images/hero_guide.webp" alt="" class="page-head__img" />
+                <div class="page-head__body">
+                    <h1 class="page-head__title">Visit</h1>
+                    <p class="page-head__lead">
+                        Everything you need to prepare for a quiet encounter with the animals, amid the crisp air of the north.
+                    </p>
+                </div>
+            </section>
+
+            <!-- ===== Hours & closing days ===== -->
+            <section class="page-section page-section--media">
+                <div class="page-section__body">
+                    <h2 class="page-section__title">Hours & Closing Days</h2>
+                    <p class="page-section__text">
+                        As the seasons turn, the animals' expressions and active hours shift little by little. The quiet of a clear morning, or the animals resting in the soft light before dusk — every visit brings something new. Please come with a relaxed schedule to match your plans.
+                    </p>
+                    <dl class="info-list">
+                        <div class="info-list__item">
+                            <dt class="info-list__label">Hours</dt>
+                            <dd class="info-list__desc">
+                                9:00 – 18:00 (last entry 17:00)<br />
+                                Winter (Nov–Mar): 9:00 – 16:30 (last entry 16:00)
+                            </dd>
+                        </div>
+                        <div class="info-list__item">
+                            <dt class="info-list__label">Closed</dt>
+                            <dd class="info-list__desc">
+                                Every Wednesday (or the next weekday if a holiday)<br />
+                                Year-end and New Year (Dec 29 – Jan 3)
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+                <img src="../images/guide1.webp" alt="" class="page-section__figure" />
+            </section>
+
+            <!-- ===== Admission ===== -->
+            <section class="page-section page-section--media page-section--reverse">
+                <div class="page-section__body">
+                    <h2 class="page-section__title">Admission</h2>
+                    <p class="page-section__text">
+                        Tickets can be bought at the gate, or in advance from your smartphone as web tickets. Web tickets let you pass through the gate smoothly on the day — ideal for a weekend outing or a family visit.
+                    </p>
+                    <table class="fee-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Category</th>
+                                <th scope="col">Individual</th>
+                                <th scope="col">Group (20+)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Adult (high school and over)</th>
+                                <td>¥1,000</td>
+                                <td>¥800</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Elementary / junior high</th>
+                                <td>¥400</td>
+                                <td>¥320</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Preschool children</th>
+                                <td>Free</td>
+                                <td>Free</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="page-section__note">
+                        Visitors with a disability certificate and one accompanying carer are admitted free. Please show it at the reception.
+                    </p>
+                </div>
+                <img src="../images/guide2.webp" alt="" class="page-section__figure" />
+            </section>
+
+            <!-- ===== Park map (text + mascot) ===== -->
+            <section class="page-section page-section--media">
+                <div class="page-section__body">
+                    <h2 class="page-section__title">Park Map</h2>
+                    <p class="page-section__text">
+                        The park is divided into four main areas, laid out with room to breathe and designed to echo the northern landscape. There's no need to rush and see every animal. Listen to the rustling trees and the breath of the animals, stop where you like, and stroll at your own pace.
+                    </p>
+                </div>
+                <img src="../images/guide3.webp" alt="" class="page-section__figure" />
+            </section>
+
+            <!-- ===== Park map image (full width, outside section) ===== -->
+            <img src="../images/park-map.webp" alt="Park map" class="park-map" />
+        </main>
+
+        <dialog id="ticket-dialog" class="ticket-dialog">
+            <button
+                class="ticket-dialog__close"
+                command="close"
+                commandfor="ticket-dialog"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+            <h2 class="ticket-dialog__title">Buy Tickets</h2>
+            <p class="ticket-dialog__note">Please select the number of tickets.</p>
+
+            <div class="ticket-dialog__rows">
+                <div class="ticket-row">
+                    <span class="ticket-row__name">Adult (high school and over)</span>
+                    <span class="ticket-row__price">¥1,000</span>
+                    <input
+                        class="ticket-row__qty"
+                        type="number"
+                        min="0"
+                        value="0"
+                        data-price="1000"
+                    />
+                </div>
+                <div class="ticket-row">
+                    <span class="ticket-row__name">Child (elementary/junior high)</span>
+                    <span class="ticket-row__price">¥400</span>
+                    <input
+                        class="ticket-row__qty"
+                        type="number"
+                        min="0"
+                        value="0"
+                        data-price="400"
+                    />
+                </div>
+            </div>
+
+            <p class="ticket-dialog__total">Total: ¥<span id="ticket-total">0</span></p>
+
+            <button class="ticket-dialog__submit" type="button">Proceed to checkout</button>
+        </dialog>
+
+        <!-- ===== Companion bear (shared across pages) ===== -->
+        <a class="bear" href="#top" aria-label="Return to top of page">
+            <img src="../images/polarbear.svg" alt="" class="bear__img" />
+            <span class="bear__label">TOP ↑</span>
+        </a>
+
+        <footer class="footer">
+            <p class="footer__copy">&copy; Hokkaido ○○ Zoo</p>
+            <p class="footer__note">All images on this site are AI-generated.</p>
+        </footer>
+
+        <script src="../js/main.js"></script>
+    </body>
+</html>

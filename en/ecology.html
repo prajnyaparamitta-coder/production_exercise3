@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Discover how the animals of our zoo live day to day: what they eat, how they rest, and the character of each one."
+        />
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="icon" href="../images/favicon.ico" />
+        <title>Animal Life｜Hokkaido ○○ Zoo</title>
+    </head>
+
+    <body id="top">
+        <!-- ===== Header (shared across pages) ===== -->
+        <header class="header">
+            <a class="header__logo" href="index.html">
+                <span class="header__logo-mark" aria-hidden="true">
+                    <img src="../images/polarbear.svg" alt="Hokkaido ○○ Zoo" class="header__logo-img" />
+                </span>
+                <span class="header__logo-text">Hokkaido ○○ Zoo</span>
+            </a>
+
+            <div class="header__actions">
+                <!-- Ticket CTA -->
+                <button class="header__ticket" commandfor="ticket-dialog" command="show-modal">
+                    Tickets
+                </button>
+                <a class="header__lang" href="../ecology.html">JP</a>
+                <button
+                    class="header__theme"
+                    type="button"
+                    aria-label="テーマを切り替え"
+                >
+                    <span class="header__theme-icon" aria-hidden="true">◐</span>
+                </button>
+                <button
+                    class="header__toggle"
+                    type="button"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                    aria-controls="global-nav"
+                >
+                    <span class="header__toggle-bar"></span>
+                    <span class="header__toggle-bar"></span>
+                    <span class="header__toggle-bar"></span>
+                </button>
+            </div>
+
+            <nav class="header__nav" id="global-nav">
+                <ul class="header__menu">
+                    <li class="header__item"><a href="guide.html">Visit</a></li>
+                    <li class="header__item"><a href="index.html#animals">Animals</a></li>
+                    <li class="header__item"><a href="ecology.html">Animal Life</a></li>
+                    <li class="header__item"><a href="mission.html">Mission</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- ===== Page heading ===== -->
+            <section class="page-head">
+                <img src="../images/hero_ecology.webp" alt="" class="page-head__img" />
+                <div class="page-head__body">
+                    <h1 class="page-head__title">Animal Life</h1>
+                    <p class="page-head__lead">
+                        What they eat, how they sleep, how they spend the day. The closer you look, the less it feels like a distant world.
+                    </p>
+                </div>
+            </section>
+
+            <!-- ===== How they spend the day ===== -->
+            <section class="page-section page-section--media">
+                <div class="page-section__body">
+                    <h2 class="page-section__title">How They Spend the Day</h2>
+                    <p class="page-section__text">
+                        We don't insist on fixed "show times" for our animals. From waking in the morning to falling asleep at night — how they feel the wind, where they laze about, when they leap into the water — much of it is left to the animals' own mood and daily rhythm.
+                    </p>
+                    <p class="page-section__text">
+                        Rather than performing on cue inside a tidy cage, they wander as they please, or curl up to sleep on a cool rock. What flows here is their real, unscripted "everyday time." Meeting a completely different expression depending on when you visit is part of what makes this zoo special.
+                    </p>
+                </div>
+                <img src="../images/ecology1.webp" alt="" class="page-section__figure" />
+            </section>
+
+            <!-- ===== About food ===== -->
+            <section class="page-section page-section--media page-section--reverse">
+                <div class="page-section__body">
+                    <h2 class="page-section__title">About Their Food</h2>
+                    <p class="page-section__text">
+                        We don't simply toss the food in all at once and call it "feeding time." To recreate the way northern animals find food in the wild, we hide their food and let them search, or deliberately make them take time and use their heads.
+                    </p>
+                    <p class="page-section__text">
+                        The intent gaze of a polar bear chasing fish in an icy pool, or the sound of a sika deer deftly crunching tough bark — this is not mere "feeding," but an important moment that gently switches on the wildness they naturally carry. In the dynamic expressions of that instant, you can feel the sheer vitality of northern life.
+                    </p>
+                </div>
+                <img src="../images/ecology2.webp" alt="" class="page-section__figure" />
+            </section>
+
+            <!-- ===== Seasons and life ===== -->
+            <section class="page-section page-section--media">
+                <div class="page-section__body">
+                    <h2 class="page-section__title">Seasons and Life</h2>
+                    <p class="page-section__text">
+                        Hokkaido's climate dramatically changes the animals' coats and behavior. When deep-snow winter arrives, the cold-hardy animals grow lively — truly in their element — dashing across the snowfields as round silhouettes wrapped in thick winter fur.
+                    </p>
+                    <p class="page-section__text">
+                        As the seasons turn, the animals' lives change dynamically too. Rather than keeping the same conditions year-round with artificial climate control, we let them live while accepting the north's harsh cold and clear air as they are. It's here, in that, that the "true ecology" this zoo most wants to show can be found.
+                    </p>
+                </div>
+                <img src="../images/ecology3.webp" alt="" class="page-section__figure" />
+            </section>
+        </main>
+
+        <dialog id="ticket-dialog" class="ticket-dialog">
+            <button
+                class="ticket-dialog__close"
+                command="close"
+                commandfor="ticket-dialog"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+            <h2 class="ticket-dialog__title">Buy Tickets</h2>
+            <p class="ticket-dialog__note">Please select the number of tickets.</p>
+
+            <div class="ticket-dialog__rows">
+                <div class="ticket-row">
+                    <span class="ticket-row__name">Adult (high school and over)</span>
+                    <span class="ticket-row__price">¥1,000</span>
+                    <input
+                        class="ticket-row__qty"
+                        type="number"
+                        min="0"
+                        value="0"
+                        data-price="1000"
+                    />
+                </div>
+                <div class="ticket-row">
+                    <span class="ticket-row__name">Child (elementary/junior high)</span>
+                    <span class="ticket-row__price">¥400</span>
+                    <input
+                        class="ticket-row__qty"
+                        type="number"
+                        min="0"
+                        value="0"
+                        data-price="400"
+                    />
+                </div>
+            </div>
+
+            <p class="ticket-dialog__total">Total: ¥<span id="ticket-total">0</span></p>
+
+            <button class="ticket-dialog__submit" type="button">Proceed to checkout</button>
+        </dialog>
+
+        <!-- ===== Companion bear (shared across pages) ===== -->
+        <a class="bear" href="#top" aria-label="Return to top of page">
+            <img src="../images/polarbear.svg" alt="" class="bear__img" />
+            <span class="bear__label">TOP ↑</span>
+        </a>
+
+        <footer class="footer">
+            <p class="footer__copy">&copy; Hokkaido ○○ Zoo</p>
+            <p class="footer__note">All images on this site are AI-generated.</p>
+        </footer>
+
+        <script src="../js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Meet our main attraction, the polar bear. Discover how these magnificent animals thrive in icy waters, their unique physical adaptations, and the environmental challenges they face."
+        />
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="images/favicon.ico" />
+        <title>ペンギン｜北海道○○動物園</title>
+    </head>
+
+    <body id="top">
+        <!-- ===== ヘッダー（全ページ共通） ===== -->
+        <header class="header">
+            <a class="header__logo" href="index.html">
+                <span class="header__logo-mark" aria-hidden="true">
+                    <img src="images/polarbear.svg" alt="北海道○○動物園" class="header__logo-img" />
+                </span>
+                <span class="header__logo-text">北海道○○動物園</span>
+            </a>
+
+            <div class="header__actions">
+                <!-- チケット常駐CTA -->
+                <button class="header__ticket" commandfor="ticket-dialog" command="show-modal">
+                    チケット
+                </button>
+                <a class="header__lang" href="en/penguin.html">EN</a>
+                <button
+                    class="header__theme"
+                    type="button"
+                    aria-label="テーマを切り替え"
+                >
+                    <span class="header__theme-icon" aria-hidden="true">◐</span>
+                </button>
+                <button
+                    class="header__toggle"
+                    type="button"
+                    aria-label="メニューを開く"
+                    aria-expanded="false"
+                    aria-controls="global-nav"
+                >
+                    <span class="header__toggle-bar"></span>
+                    <span class="header__toggle-bar"></span>
+                    <span class="header__toggle-bar"></span>
+                </button>
+            </div>
+
+            <nav class="header__nav" id="global-nav">
+                <ul class="header__menu">
+                    <li class="header__item"><a href="guide.html">来園案内</a></li>
+                    <li class="header__item"><a href="index.html#animals">動物紹介</a></li>
+                    <li class="header__item"><a href="ecology.html">動物たちの暮らし</a></li>
+                    <li class="header__item"><a href="mission.html">理念</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="page-head">
+                <img src="images/penguin2.webp" alt="" class="page-head__img" />
+                <div class="page-head__body">
+                    <h1 class="page-head__title">ペンギン</h1>
+                    <p class="page-head__lead">
+                        陸ではよちよち、海では飛ぶように。二つの顔を持つ鳥。
+                    </p>
+                </div>
+            </section>
+
+            <section class="page-section page-section--tight">
+                <table class="species-table">
+                    <tbody>
+                        <tr>
+                            <th scope="row">和名</th>
+                            <td>オウサマペンギン</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">学名</th>
+                            <td><i>Aptenodytes patagonicus</i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">英名</th>
+                            <td>King penguin</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">分類</th>
+                            <td>ペンギン目ペンギン科</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">分布</th>
+                            <td>南極周辺の島々、亜南極圏</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">全長</th>
+                            <td>85〜95cm</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">体重</th>
+                            <td>10〜16kg</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">生態・特徴</th>
+                            <td>
+                                群れで暮らす海鳥。胸から喉にかけての黄橙色の模様が特徴。深く潜水して魚やイカを捕らえる。
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="page-section page-section--media">
+                <div class="page-section__body">
+                    <h2 class="page-section__title">空を捨て、海を選んだ鳥</h2>
+                    <p class="page-section__text">
+                        鳥でありながら空を飛ぶことをやめ、冷たい海の中へと活路を見いだしたペンギンたち。長い進化の歴史の中で、彼らは翼を頑丈なフリッパー（ヒレ）へと進化させ、広大な海洋世界を我が物として生きる道を選びました。
+                    </p>
+                    <p class="page-section__text">
+                        陸の上では少し不器用に、一歩一歩を確かめるように歩む姿が愛らしさを誘いますが、ひとたび水面に足を踏み入れると、その動きは一変します。重力から解放されたかのように水中を自在に駆け巡る姿は、まさに「海を飛ぶ鳥」そのものの気高さに満ちています。
+                    </p>
+                </div>
+                <img src="images/penguin01.webp" alt="" class="page-section__figure" />
+            </section>
+
+            <section class="page-section page-section--media page-section--reverse">
+                <div class="page-section__body">
+                    <h2 class="page-section__title">泳ぐための体</h2>
+                    <p class="page-section__text">
+                        水中での優れた機動力を支えているのは、流線型の美しいボディと驚異的な身体のしくみです。骨格は一般的な鳥類とは異なり、密度が高くずっしりと重く作られており、海中深くへ潜水する際の重りとしての役割を果たしています。
+                    </p>
+                    <p class="page-section__text">
+                        さらに、全身を覆う密度の高い羽毛は、冷たい海水を完全にシャットアウトすると同時に、羽毛の間に空気を閉じ込めることで優れた保温効果と浮力調整をもたらします。水流を巧みに読み取り、方向を自在に変えるための尾羽と足の働きも、彼らの泳ぎを支える大切な要素です。
+                    </p>
+                </div>
+                <img src="images/penguin02.webp" alt="" class="page-section__figure" />
+            </section>
+
+            <section class="page-section page-section--media">
+                <div class="page-section__body">
+                    <h2 class="page-section__title">仲間と暮らす</h2>
+                    <p class="page-section__text">
+                        群れをなし、互いの存在を感じ合いながら暮らすこともペンギンたちの大きな特徴です。厳しい自然環境や外敵から身を守るため、彼らは固い絆で結ばれたコミュニティを形成し、日々の生活を共にしています。
+                    </p>
+                    <p class="page-section__text">
+                        陸上でのんびりと羽づくろいをしたり、順番に水へ飛び込んだりする群れの様子を見ていると、そこには穏やかで秩序ある時間が流れています。鳴き声でコミュニケーションを取り合う姿や、仲間同士で寄り添う様子からは、豊かな社会性と強い結びつきが伺えます。
+                    </p>
+                </div>
+                <img src="images/penguin03.webp" alt="" class="page-section__figure" />
+            </section>
+
+            <section class="page-section page-section--media page-section--reverse">
+                <div class="page-section__body">
+                    <h2 class="page-section__title">子育ての季節</h2>
+                    <p class="page-section__text">
+                        新しい命を迎える季節になると、ペンギンたちの暮らしは一段と緊密でドラマチックなものになります。カップルで協力しながら巣を作り、大切に卵を温め、孵化したヒナを懸命に育てる姿には、深い愛情と確かな絆が宿っています。
+                    </p>
+                    <p class="page-section__text">
+                        親鳥が交代で海へ狩りに出かけ、たくさんの獲物を持ち帰ってヒナに与える光景は、命をつなぐ営みの尊さを静かに伝えてくれます。やがて親と同じように海へと旅立つ準備を整えていくヒナたちの成長は、訪れる人々に大きな感動と温かな記憶を残してくれます。
+                    </p>
+                </div>
+                <img src="images/penguin04.webp" alt="" class="page-section__figure" />
+            </section>
+        </main>
+
+        <dialog id="ticket-dialog" class="ticket-dialog">
+            <button
+                class="ticket-dialog__close"
+                command="close"
+                commandfor="ticket-dialog"
+                aria-label="閉じる"
+            >
+                ×
+            </button>
+
+            <h2 class="ticket-dialog__title">チケット購入</h2>
+            <p class="ticket-dialog__note">ご希望の枚数を選択してください。</p>
+
+            <div class="ticket-dialog__rows">
+                <div class="ticket-row">
+                    <span class="ticket-row__name">大人（高校生以上）</span>
+                    <span class="ticket-row__price">1,000円</span>
+                    <input
+                        class="ticket-row__qty"
+                        type="number"
+                        min="0"
+                        value="0"
+                        data-price="1000"
+                    />
+                </div>
+                <div class="ticket-row">
+                    <span class="ticket-row__name">小・中学生</span>
+                    <span class="ticket-row__price">400円</span>
+                    <input
+                        class="ticket-row__qty"
+                        type="number"
+                        min="0"
+                        value="0"
+                        data-price="400"
+                    />
+                </div>
+            </div>
+
+            <p class="ticket-dialog__total">合計：<span id="ticket-total">0</span>円</p>
+
+            <button class="ticket-dialog__submit" type="button">購入手続きへ進む</button>
+        </dialog>
+
+        <!-- ===== クマ（全ページ共通） ===== -->
+        <a class="bear" href="#top" aria-label="ページトップへ戻る">
+            <img src="images/polarbear.svg" alt="" class="bear__img" />
+            <span class="bear__label">TOP ↑</span>
+        </a>
+
+        <footer class="footer">
+            <p class="footer__copy">&copy; 北海道○○動物園</p>
+            <p class="footer__note">All images on this site are AI-generated.</p>
+        </footer>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

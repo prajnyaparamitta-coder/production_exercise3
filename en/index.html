@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Meet polar bears and northern wildlife in Hokkaido. Plan your visit, explore our animals, and book tickets online."
+        />
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="icon" href="../images/favicon.ico" />
+        <title>Hokkaido ○○ Zoo</title>
+    </head>
+
+    <body id="top">
+        <header class="header">
+            <a class="header__logo" href="index.html">
+                <span class="header__logo-mark" aria-hidden="true">
+                    <img src="../images/polarbear.svg" alt="Hokkaido ○○ Zoo" class="header__logo-img" />
+                </span>
+                <span class="header__logo-text">Hokkaido ○○ Zoo</span>
+            </a>
+
+            <div class="header__actions">
+                <button class="header__ticket" commandfor="ticket-dialog" command="show-modal">
+                    Tickets
+                </button>
+                <a class="header__lang" href="../index.html">JP</a>
+                <button
+                    class="header__theme"
+                    type="button"
+                    aria-label="テーマを切り替え"
+                >
+                    <span class="header__theme-icon" aria-hidden="true">◐</span>
+                </button>
+                <button
+                    class="header__toggle"
+                    type="button"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                    aria-controls="global-nav"
+                >
+                    <span class="header__toggle-bar"></span>
+                    <span class="header__toggle-bar"></span>
+                    <span class="header__toggle-bar"></span>
+                </button>
+            </div>
+
+            <nav class="header__nav" id="global-nav">
+                <ul class="header__menu">
+                    <li class="header__item"><a href="guide.html">Visit</a></li>
+                    <li class="header__item"><a href="index.html#animals">Animals</a></li>
+                    <li class="header__item"><a href="ecology.html">Animal Life</a></li>
+                    <li class="header__item"><a href="mission.html">Mission</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- ===== Hero (Swiper carousel, autoplay / fade) ===== -->
+            <section class="hero">
+                <div class="swiper hero-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="../images/hero1.webp" alt="" class="hero__img" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../images/hero2.webp" alt="" class="hero__img" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../images/hero3.webp" alt="" class="hero__img" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../images/hero4.webp" alt="" class="hero__img" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== Info bar: greeting + open today + ticket link ===== -->
+            <section class="info-bar">
+                <p class="info-bar__greeting">Welcome to Hokkaido ○○ Zoo.</p>
+                <p class="info-bar__hours">
+                    Open today <span class="info-bar__time">9:00 – 18:00</span>
+                </p>
+                <button class="info-bar__ticket" commandfor="ticket-dialog" command="show-modal">
+                    Buy tickets online
+                </button>
+            </section>
+
+            <!-- ===== Visit ===== -->
+            <section class="guide feature" id="guide">
+                <div class="feature__media">
+                    <img src="../images/guide.webp" alt="" class="feature__img" />
+                </div>
+                <div class="feature__card">
+                    <h2 class="feature__title">Planning your visit</h2>
+                    <p class="feature__text">
+                        Opening hours, admission, park map — everything you need to know before you come.
+                    </p>
+                    <p class="feature__text">
+                        Whether it's your first visit or your tenth, take your time and enjoy the park at your own pace.
+                    </p>
+                    <a class="feature__link" href="guide.html">See visitor information</a>
+                </div>
+            </section>
+
+            <!-- ===== Animals ===== -->
+            <section class="animals" id="animals">
+                <h2 class="animals__title">Come and meet the animals</h2>
+                <p class="animals__lead">
+                    Many animals live here at ○○ Zoo. Each of them has its own way of life and its own character.
+                </p>
+                <ul class="animals__list">
+                    <li class="animals__card">
+                        <img src="../images/polarbear.webp" alt="" class="animals__card-img" />
+                        <h3 class="animals__card-title">Polar Bear</h3>
+                        <p class="animals__card-text">
+                            White fur and a powerful body — a symbol of survival in the harsh Arctic.
+                        </p>
+                        <a class="animals__card-link" href="polarbear.html">Learn more</a>
+                    </li>
+                    <li class="animals__card">
+                        <img src="../images/penguin.webp" alt="" class="animals__card-img" />
+                        <h3 class="animals__card-title">Penguin</h3>
+                        <p class="animals__card-text">
+                            Slow and steady on land, but transformed into a swift swimmer in the water.
+                        </p>
+                        <a class="animals__card-link" href="penguin.html">Learn more</a>
+                    </li>
+                    <li class="animals__card">
+                        <img src="../images/deer.webp" alt="" class="animals__card-img" />
+                        <h3 class="animals__card-title">Sika Deer</h3>
+                        <p class="animals__card-text">
+                            A species native to Hokkaido's forests. Its antlers regrow every year.
+                        </p>
+                        <a class="animals__card-link" href="deer.html">Learn more</a>
+                    </li>
+                    <li class="animals__card">
+                        <img src="../images/brownbear.webp" alt="" class="animals__card-img" />
+                        <h3 class="animals__card-title">Brown Bear</h3>
+                        <p class="animals__card-text">
+                            Japan's largest land animal. In autumn it catches fish in the rivers.
+                        </p>
+                        <a class="animals__card-link" href="brownbear.html">Learn more</a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- ===== Animal Life ===== -->
+            <section class="ecology feature feature--reverse" id="ecology">
+                <div class="feature__media">
+                    <img src="../images/wildlife.webp" alt="" class="feature__img" />
+                </div>
+                <div class="feature__card">
+                    <h2 class="feature__title">The more you know them, the more you love them.</h2>
+                    <p class="feature__text">What kind of day do the animals spend here?</p>
+                    <p class="feature__text">
+                        Waking up, wandering about, eating, and dozing in the sun. Sometimes they dive into the water, and sometimes they simply stay still.
+                    </p>
+                    <p class="feature__text">
+                        The animals don't live by a timetable we set for them. They have their own natural rhythm, changing with their mood and the season.
+                    </p>
+                    <p class="feature__text">
+                        What they eat, where they sleep, how they spend the day — the more you know of their lives, the closer their world feels.
+                    </p>
+                    <a class="feature__link" href="ecology.html">Take a look at their daily life</a>
+                </div>
+            </section>
+
+            <!-- ===== Mission ===== -->
+            <section class="mission" id="mission">
+                <h2 class="mission__title">Meet the animals, and think about the future of nature.</h2>
+                <p class="mission__text">
+                    We aim to be a zoo where looking at the animals leads you to think about the nature that lies beyond them.
+                </p>
+                <p class="mission__text">
+                    To know the animal in front of you is also to know the environment it lives in and the changes taking place there. We hope that meeting the animals becomes a starting point for thinking about the future of people and nature.
+                </p>
+                <p class="mission__text">
+                    By creating an environment where animals can live as they naturally would, and by working on conservation and education, we look toward the future of animals and nature from this northern land.
+                </p>
+
+                <a class="mission__link" href="mission.html">Read our mission</a>
+            </section>
+        </main>
+
+        <dialog id="ticket-dialog" class="ticket-dialog">
+            <button
+                class="ticket-dialog__close"
+                command="close"
+                commandfor="ticket-dialog"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+            <h2 class="ticket-dialog__title">Buy Tickets</h2>
+            <p class="ticket-dialog__note">Please select the number of tickets.</p>
+
+            <div class="ticket-dialog__rows">
+                <div class="ticket-row">
+                    <span class="ticket-row__name">Adult (high school and over)</span>
+                    <span class="ticket-row__price">¥1,000</span>
+                    <input
+                        class="ticket-row__qty"
+                        type="number"
+                        min="0"
+                        value="0"
+                        data-price="1000"
+                    />
+                </div>
+                <div class="ticket-row">
+                    <span class="ticket-row__name">Child (elementary/junior high)</span>
+                    <span class="ticket-row__price">¥400</span>
+                    <input
+                        class="ticket-row__qty"
+                        type="number"
+                        min="0"
+                        value="0"
+                        data-price="400"
+                    />
+                </div>
+            </div>
+
+            <p class="ticket-dialog__total">Total: ¥<span id="ticket-total">0</span></p>
+
+            <button class="ticket-dialog__submit" type="button">Proceed to checkout</button>
+        </dialog>
+
+        <!-- ===== Companion bear (crosses left to right with scroll progress) ===== -->
+        <a class="bear" href="#top" aria-label="Return to top of page">
+            <img src="../images/polarbear.svg" alt="" class="bear__img" />
+            <span class="bear__label">TOP ↑</span>
+        </a>
+
+        <!-- ===== Access (before footer) ===== -->
+        <section class="access">
+            <h2 class="access__title">Access</h2>
+            <p class="access__text">○○ 1-1, ○○ City, Hokkaido 000-0000</p>
+            <dl class="access__list">
+                <div class="access__item">
+                    <dt class="access__label">By train</dt>
+                    <dd class="access__desc">About 20 min by bus from JR ○○ Station. Get off at "Zoo-mae."</dd>
+                </div>
+                <div class="access__item">
+                    <dt class="access__label">By car</dt>
+                    <dd class="access__desc">About 15 min from ○○ IC on the ○○ Expressway. Free parking for 300 cars.</dd>
+                </div>
+                <div class="access__item">
+                    <dt class="access__label">Hours</dt>
+                    <dd class="access__desc">9:00 – 18:00 (last entry 17:00) / closes 16:30 in winter</dd>
+                </div>
+                <div class="access__item">
+                    <dt class="access__label">Closed</dt>
+                    <dd class="access__desc">Wednesdays (or the next day if a holiday) / year-end and New Year</dd>
+                </div>
+            </dl>
+        </section>
+
+        <footer class="footer">
+            <p class="footer__copy">&copy; Hokkaido ○○ Zoo</p>
+            <p class="footer__note">All images on this site are AI-generated.</p>
+        </footer>
+
+        <script src="../js/swiper.js"></script>
+        <script src="../js/main.js"></script>
+    </body>
+</html>

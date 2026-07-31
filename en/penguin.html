@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Meet the penguin, a bird with two faces: waddling on land and flying through the water. Its body, its flock, and raising its young."
+        />
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="icon" href="../images/favicon.ico" />
+        <title>Penguin｜Hokkaido ○○ Zoo</title>
+    </head>
+
+    <body id="top">
+        <!-- ===== Header (shared across pages) ===== -->
+        <header class="header">
+            <a class="header__logo" href="index.html">
+                <span class="header__logo-mark" aria-hidden="true">
+                    <img
+                        src="../images/polarbear.svg"
+                        alt="Hokkaido ○○ Zoo"
+                        class="header__logo-img"
+                    />
+                </span>
+                <span class="header__logo-text">Hokkaido ○○ Zoo</span>
+            </a>
+
+            <div class="header__actions">
+                <!-- Ticket CTA -->
+                <button class="header__ticket" commandfor="ticket-dialog" command="show-modal">
+                    Tickets
+                </button>
+                <a class="header__lang" href="../penguin.html">JP</a>
+                <button
+                    class="header__theme"
+                    type="button"
+                    aria-label="テーマを切り替え"
+                >
+                    <span class="header__theme-icon" aria-hidden="true">◐</span>
+                </button>
+                <button
+                    class="header__toggle"
+                    type="button"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                    aria-controls="global-nav"
+                >
+                    <span class="header__toggle-bar"></span>
+                    <span class="header__toggle-bar"></span>
+                    <span class="header__toggle-bar"></span>
+                </button>
+            </div>
+
+            <nav class="header__nav" id="global-nav">
+                <ul class="header__menu">
+                    <li class="header__item"><a href="guide.html">Visit</a></li>
+                    <li class="header__item"><a href="index.html#animals">Animals</a></li>
+                    <li class="header__item"><a href="ecology.html">Animal Life</a></li>
+                    <li class="header__item"><a href="mission.html">Mission</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="page-head">
+                <img src="../images/penguin2.webp" alt="" class="page-head__img" />
+                <div class="page-head__body">
+                    <h1 class="page-head__title">Penguin</h1>
+                    <p class="page-head__lead">
+                        Waddling on land, flying through the water. A bird with two faces.
+                    </p>
+                </div>
+            </section>
+
+            <section class="page-section page-section--tight">
+                <table class="species-table">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Scientific name</th>
+                            <td><i>Aptenodytes patagonicus</i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">English name</th>
+                            <td>King penguin</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Class</th>
+                            <td>Sphenisciformes, Spheniscidae</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Range</th>
+                            <td>Sub-Antarctic islands and surrounding waters</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Length</th>
+                            <td>85–95 cm</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Weight</th>
+                            <td>10–16 kg</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Notes</th>
+                            <td>
+                                A seabird that lives in colonies. Recognized by the yellow-orange
+                                markings from chest to throat. Dives deep to catch fish and squid.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="page-section page-section--media">
+                <div class="page-section__body">
+                    <h2 class="page-section__title">The Bird That Gave Up the Sky for the Sea</h2>
+                    <p class="page-section__text">
+                        Though birds, penguins gave up flying through the sky and found their way in
+                        the cold sea instead. Over a long history of evolution, they turned their
+                        wings into sturdy flippers and chose to live making the vast ocean world
+                        their own.
+                    </p>
+                    <p class="page-section__text">
+                        On land, the way they walk a little clumsily, testing each step, invites a
+                        certain charm — but the moment they set foot on the water, their movement
+                        transforms. Roaming freely underwater as if released from gravity, they are
+                        filled with the very nobility of a "bird that flies through the sea."
+                    </p>
+                </div>
+                <img src="../images/penguin01.webp" alt="" class="page-section__figure" />
+            </section>
+
+            <section class="page-section page-section--media page-section--reverse">
+                <div class="page-section__body">
+                    <h2 class="page-section__title">A Body Built for Swimming</h2>
+                    <p class="page-section__text">
+                        What supports their superb agility underwater is a beautifully streamlined
+                        body and an astonishing physical design. Unlike most birds, their skeleton
+                        is dense and heavy, serving as ballast when they dive deep into the sea.
+                    </p>
+                    <p class="page-section__text">
+                        Moreover, the dense plumage covering the whole body completely shuts out the
+                        cold seawater, while trapping air between the feathers to provide excellent
+                        insulation and buoyancy control. The work of the tail feathers and feet —
+                        reading the currents deftly and changing direction at will — is also an
+                        essential element that supports their swimming.
+                    </p>
+                </div>
+                <img src="../images/penguin02.webp" alt="" class="page-section__figure" />
+            </section>
+
+            <section class="page-section page-section--media">
+                <div class="page-section__body">
+                    <h2 class="page-section__title">Living with the Flock</h2>
+                    <p class="page-section__text">
+                        Living in flocks, sensing one another's presence, is another great
+                        characteristic of penguins. To protect themselves from the harsh environment
+                        and from predators, they form communities bound by firm ties and share their
+                        daily lives together.
+                    </p>
+                    <p class="page-section__text">
+                        Watching the flock preen leisurely on land, or dive into the water one after
+                        another in turn, you see a calm and orderly time flowing there. In the way
+                        they communicate by call, and nestle close to one another, you can sense a
+                        rich sociality and a strong bond.
+                    </p>
+                </div>
+                <img src="../images/penguin03.webp" alt="" class="page-section__figure" />
+            </section>
+
+            <section class="page-section page-section--media page-section--reverse">
+                <div class="page-section__body">
+                    <h2 class="page-section__title">The Season of Raising Young</h2>
+                    <p class="page-section__text">
+                        When the season to welcome new life arrives, the penguins' lives become all
+                        the more close-knit and dramatic. In the way a pair cooperates to build a
+                        nest, carefully warms the egg, and raises the hatched chick with all its
+                        might, dwell deep affection and a sure bond.
+                    </p>
+                    <p class="page-section__text">
+                        The sight of the parents taking turns to hunt at sea and bringing back
+                        plenty of prey for the chick quietly conveys the preciousness of the work of
+                        passing on life. And the growth of the chicks, preparing to set out for the
+                        sea just as their parents did, leaves visitors with deep emotion and warm
+                        memories.
+                    </p>
+                </div>
+                <img src="../images/penguin04.webp" alt="" class="page-section__figure" />
+            </section>
+        </main>
+
+        <dialog id="ticket-dialog" class="ticket-dialog">
+            <button
+                class="ticket-dialog__close"
+                command="close"
+                commandfor="ticket-dialog"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+            <h2 class="ticket-dialog__title">Buy Tickets</h2>
+            <p class="ticket-dialog__note">Please select the number of tickets.</p>
+
+            <div class="ticket-dialog__rows">
+                <div class="ticket-row">
+                    <span class="ticket-row__name">Adult (high school and over)</span>
+                    <span class="ticket-row__price">¥1,000</span>
+                    <input
+                        class="ticket-row__qty"
+                        type="number"
+                        min="0"
+                        value="0"
+                        data-price="1000"
+                    />
+                </div>
+                <div class="ticket-row">
+                    <span class="ticket-row__name">Child (elementary/junior high)</span>
+                    <span class="ticket-row__price">¥400</span>
+                    <input
+                        class="ticket-row__qty"
+                        type="number"
+                        min="0"
+                        value="0"
+                        data-price="400"
+                    />
+                </div>
+            </div>
+
+            <p class="ticket-dialog__total">Total: ¥<span id="ticket-total">0</span></p>
+
+            <button class="ticket-dialog__submit" type="button">Proceed to checkout</button>
+        </dialog>
+
+        <!-- ===== Companion bear (shared across pages) ===== -->
+        <a class="bear" href="#top" aria-label="Return to top of page">
+            <img src="../images/polarbear.svg" alt="" class="bear__img" />
+            <span class="bear__label">TOP ↑</span>
+        </a>
+
+        <footer class="footer">
+            <p class="footer__copy">&copy; Hokkaido ○○ Zoo</p>
+            <p class="footer__note">All images on this site are AI-generated.</p>
+        </footer>
+
+        <script src="../js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Meet polar bears and northern wildlife in Hokkaido. Plan your visit, explore our animals, and book tickets online."
+        />
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="images/favicon.ico" />
+        <title>北海道○○動物園</title>
+    </head>
+
+    <body id="top">
+        <header class="header">
+            <a class="header__logo" href="index.html">
+                <span class="header__logo-mark" aria-hidden="true">
+                    <img src="images/polarbear.svg" alt="北海道○○動物園" class="header__logo-img" />
+                </span>
+                <span class="header__logo-text">北海道○○動物園</span>
+            </a>
+
+            <div class="header__actions">
+                <button class="header__ticket" commandfor="ticket-dialog" command="show-modal">
+                    チケット
+                </button>
+                <a class="header__lang" href="en/index.html">EN</a>
+                <button
+                    class="header__theme"
+                    type="button"
+                    aria-label="テーマを切り替え"
+                >
+                    <span class="header__theme-icon" aria-hidden="true">◐</span>
+                </button>
+                <button
+                    class="header__toggle"
+                    type="button"
+                    aria-label="メニューを開く"
+                    aria-expanded="false"
+                    aria-controls="global-nav"
+                >
+                    <span class="header__toggle-bar"></span>
+                    <span class="header__toggle-bar"></span>
+                    <span class="header__toggle-bar"></span>
+                </button>
+            </div>
+
+            <nav class="header__nav" id="global-nav">
+                <ul class="header__menu">
+                    <li class="header__item"><a href="guide.html">来園案内</a></li>
+                    <li class="header__item"><a href="index.html#animals">動物紹介</a></li>
+                    <li class="header__item"><a href="ecology.html">動物たちの暮らし</a></li>
+                    <li class="header__item"><a href="mission.html">理念</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- ===== ヒーロー（Swiperカルーセル・自動再生／fade） ===== -->
+            <section class="hero">
+                <div class="swiper hero-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/hero1.webp" alt="" class="hero__img" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/hero2.webp" alt="" class="hero__img" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/hero3.webp" alt="" class="hero__img" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/hero4.webp" alt="" class="hero__img" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== 帯：あいさつ + 本日開園 + チケット導線 ===== -->
+            <section class="info-bar">
+                <p class="info-bar__greeting">ようこそ、北海道○○動物園へ。</p>
+                <p class="info-bar__hours">
+                    本日開園 <span class="info-bar__time">9:00 – 18:00</span>
+                </p>
+                <!-- 帯のチケット導線 -->
+                <button class="info-bar__ticket" commandfor="ticket-dialog" command="show-modal">
+                    オンラインでチケットを購入
+                </button>
+            </section>
+
+            <!-- ===== 来園案内（実務情報・短い導入＋別ページへ） ===== -->
+            <section class="guide feature" id="guide">
+                <div class="feature__media">
+                    <img src="images/guide.webp" alt="" class="feature__img" />
+                </div>
+                <div class="feature__card">
+                    <h2 class="feature__title">はじめての方へ</h2>
+                    <p class="feature__text">
+                        開園時間、料金、園内マップなど、ご来園に必要な情報をまとめています。
+                    </p>
+                    <p class="feature__text">
+                        初めての方も何度目かの方も、ごゆっくりお過ごしください。
+                    </p>
+                    <a class="feature__link" href="guide.html">来園案内を見る</a>
+                </div>
+            </section>
+
+            <!-- ===== 動物紹介 ===== -->
+            <section class="animals" id="animals">
+                <h2 class="animals__title">動物たちに会いに行こう</h2>
+                <p class="animals__lead">
+                    ○○動物園にはたくさんの動物たちが暮らしています。それぞれの動物には、それぞれの暮らしがあり、それぞれの個性があります。
+                </p>
+                <ul class="animals__list">
+                    <li class="animals__card">
+                        <img src="images/polarbear.webp" alt="" class="animals__card-img" />
+                        <h3 class="animals__card-title">ホッキョクグマ</h3>
+                        <p class="animals__card-text">
+                            白い毛並みと大きな体。その姿は、北極の厳しい自然を生き抜く強さの象徴です。
+                        </p>
+                        <a class="animals__card-link" href="polarbear.html">詳しく見る</a>
+                    </li>
+                    <li class="animals__card">
+                        <img src="images/penguin.webp" alt="" class="animals__card-img" />
+                        <h3 class="animals__card-title">ペンギン</h3>
+                        <p class="animals__card-text">
+                            陸ではゆっくり歩き、水に入ると別の生きもののように泳ぎます。
+                        </p>
+                        <a class="animals__card-link" href="penguin.html">詳しく見る</a>
+                    </li>
+                    <li class="animals__card">
+                        <img src="images/deer.webp" alt="" class="animals__card-img" />
+                        <h3 class="animals__card-title">エゾシカ</h3>
+                        <p class="animals__card-text">
+                            北海道の森に暮らす在来種。角は毎年生え変わります。
+                        </p>
+                        <a class="animals__card-link" href="deer.html">詳しく見る</a>
+                    </li>
+                    <li class="animals__card">
+                        <img src="images/brownbear.webp" alt="" class="animals__card-img" />
+                        <h3 class="animals__card-title">ヒグマ</h3>
+                        <p class="animals__card-text">
+                            日本最大の陸上動物。秋には川で魚をとらえます。
+                        </p>
+                        <a class="animals__card-link" href="brownbear.html">詳しく見る</a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- ===== 動物たちの暮らし（短い導入＋別ページへ） ===== -->
+            <section class="ecology feature feature--reverse" id="ecology">
+                <div class="feature__media">
+                    <img src="images/wildlife.webp" alt="" class="feature__img" />
+                </div>
+                <div class="feature__card">
+                    <h2 class="feature__title">知れば知るほど、動物たちが好きになる。</h2>
+                    <p class="feature__text">動物たちは、どんな一日を過ごしているのでしょうか。</p>
+                    <p class="feature__text">
+                        朝起きて、歩き回り、食事をして、ひなたでぼんやり過ごす。ときには水に飛び込み、何もせずにじっとしていることもあります。
+                    </p>
+                    <p class="feature__text">
+                        動物たちは、私たちが決めた時間割どおりに暮らしているわけではありません。その日の気分や季節によって変わる、ありのままの時間があります。
+                    </p>
+                    <p class="feature__text">
+                        何を食べ、どこで眠り、どんなふうに一日を過ごしているのか。動物たちの暮らしを知るほど、彼らの世界はもっと身近なものになっていきます。
+                    </p>
+                    <a class="feature__link" href="ecology.html">動物たちの日常をのぞいてみる</a>
+                </div>
+            </section>
+
+            <!-- ===== 理念（短い導入＋別ページへ） ===== -->
+            <section class="mission" id="mission">
+                <h2 class="mission__title">動物たちと出会い、自然の未来を考える。</h2>
+                <p class="mission__text">
+                    私たちは、動物たちの姿を見つめることから、その先にある自然へと思いを広げられる動物園を目指しています。
+                </p>
+                <p class="mission__text">
+                    目の前にいる一頭の動物を知ることは、彼らが暮らす環境や、そこに起きている変化を知ることでもあります。動物たちとの出会いが、人と自然のこれからを考えるきっかけになることを願っています。
+                </p>
+                <p class="mission__text">
+                    動物たちが本来の姿で生きられる環境を整え、種の保存や学びの場づくりにも取り組みながら、北の大地から動物と自然の未来を見つめていきます。
+                </p>
+
+                <a class="mission__link" href="mission.html">私たちの理念を読む</a>
+            </section>
+        </main>
+
+        <dialog id="ticket-dialog" class="ticket-dialog">
+            <button
+                class="ticket-dialog__close"
+                command="close"
+                commandfor="ticket-dialog"
+                aria-label="閉じる"
+            >
+                ×
+            </button>
+
+            <h2 class="ticket-dialog__title">チケット購入</h2>
+            <p class="ticket-dialog__note">ご希望の枚数を選択してください。</p>
+
+            <div class="ticket-dialog__rows">
+                <div class="ticket-row">
+                    <span class="ticket-row__name">大人（高校生以上）</span>
+                    <span class="ticket-row__price">1,000円</span>
+                    <input
+                        class="ticket-row__qty"
+                        type="number"
+                        min="0"
+                        value="0"
+                        data-price="1000"
+                    />
+                </div>
+                <div class="ticket-row">
+                    <span class="ticket-row__name">小・中学生</span>
+                    <span class="ticket-row__price">400円</span>
+                    <input
+                        class="ticket-row__qty"
+                        type="number"
+                        min="0"
+                        value="0"
+                        data-price="400"
+                    />
+                </div>
+            </div>
+
+            <p class="ticket-dialog__total">合計：<span id="ticket-total">0</span>円</p>
+
+            <button class="ticket-dialog__submit" type="button">購入手続きへ進む</button>
+        </dialog>
+
+        <!-- ===== クマ（ページ全体のスクロール進捗に連動して左端→右端を横断） ===== -->
+        <!-- どの特定セクションにも属さない。scroll() タイムラインでページ全体を 0〜100% とする -->
+        <a class="bear" href="#top" aria-label="ページトップへ戻る">
+            <img src="images/polarbear.svg" alt="" class="bear__img" />
+            <span class="bear__label">TOP ↑</span>
+        </a>
+
+        <!-- ===== アクセス（フッター直前・セクションで完結） ===== -->
+        <section class="access">
+            <h2 class="access__title">アクセス</h2>
+            <p class="access__text">〒000-0000 北海道○○市○○1丁目1番地</p>
+            <dl class="access__list">
+                <div class="access__item">
+                    <dt class="access__label">電車</dt>
+                    <dd class="access__desc">JR○○駅から路線バスで約20分。「動物園前」下車すぐ。</dd>
+                </div>
+                <div class="access__item">
+                    <dt class="access__label">車</dt>
+                    <dd class="access__desc">○○自動車道 ○○ICから約15分。無料駐車場300台。</dd>
+                </div>
+                <div class="access__item">
+                    <dt class="access__label">開園時間</dt>
+                    <dd class="access__desc">9:00 – 18:00（最終入園 17:00）／冬期は16:30閉園</dd>
+                </div>
+                <div class="access__item">
+                    <dt class="access__label">休園日</dt>
+                    <dd class="access__desc">毎週水曜日（祝日の場合は翌日）／年末年始</dd>
+                </div>
+            </dl>
+        </section>
+
+        <footer class="footer">
+            <p class="footer__copy">&copy; 北海道○○動物園</p>
+            <p class="footer__note">All images on this site are AI-generated.</p>
+        </footer>
+
+        <script src="js/swiper.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

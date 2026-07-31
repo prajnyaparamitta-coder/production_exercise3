@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Meet our main attraction, the polar bear. Discover how these magnificent animals thrive in icy waters, their unique physical adaptations, and the environmental challenges they face."
+        />
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="icon" href="../images/favicon.ico" />
+        <title>Polar Bear｜Hokkaido ○○ Zoo</title>
+    </head>
+
+    <body id="top">
+        <!-- ===== Header (shared across pages) ===== -->
+        <header class="header">
+            <a class="header__logo" href="index.html">
+                <span class="header__logo-mark" aria-hidden="true">
+                    <img
+                        src="../images/polarbear.svg"
+                        alt="Hokkaido ○○ Zoo"
+                        class="header__logo-img"
+                    />
+                </span>
+                <span class="header__logo-text">Hokkaido ○○ Zoo</span>
+            </a>
+
+            <div class="header__actions">
+                <!-- Ticket CTA -->
+                <button class="header__ticket" commandfor="ticket-dialog" command="show-modal">
+                    Tickets
+                </button>
+                <a class="header__lang" href="../polarbear.html">JP</a>
+                <button
+                    class="header__theme"
+                    type="button"
+                    aria-label="テーマを切り替え"
+                >
+                    <span class="header__theme-icon" aria-hidden="true">◐</span>
+                </button>
+                <button
+                    class="header__toggle"
+                    type="button"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                    aria-controls="global-nav"
+                >
+                    <span class="header__toggle-bar"></span>
+                    <span class="header__toggle-bar"></span>
+                    <span class="header__toggle-bar"></span>
+                </button>
+            </div>
+
+            <nav class="header__nav" id="global-nav">
+                <ul class="header__menu">
+                    <li class="header__item"><a href="guide.html">Visit</a></li>
+                    <li class="header__item"><a href="index.html#animals">Animals</a></li>
+                    <li class="header__item"><a href="ecology.html">Animal Life</a></li>
+                    <li class="header__item"><a href="mission.html">Mission</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="page-head">
+                <img src="../images/polarbear2.webp" alt="" class="page-head__img" />
+                <div class="page-head__body">
+                    <h1 class="page-head__title">Polar Bear</h1>
+                    <p class="page-head__lead">
+                        The star of our zoo. A great white bear that survives the world of ice.
+                    </p>
+                </div>
+            </section>
+
+            <section class="page-section page-section--tight">
+                <table class="species-table">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Scientific name</th>
+                            <td><i>Ursus maritimus</i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">English name</th>
+                            <td>Polar bear</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Class</th>
+                            <td>Carnivora, Ursidae</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Range</th>
+                            <td>Arctic sea ice and surrounding coasts</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Length</th>
+                            <td>Approx. 2.0–2.5 m</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Weight</th>
+                            <td>Approx. 300–600 kg (male)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Notes</th>
+                            <td>
+                                One of the largest land carnivores. Adapted to extreme cold with
+                                transparent fur, black skin, and thick subcutaneous fat. Preys
+                                mainly on seals and is a strong swimmer.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="page-section page-section--media">
+                <div class="page-section__body">
+                    <h2 class="page-section__title">Hunter on the Ice</h2>
+                    <p class="page-section__text">
+                        A world of ice stretching without end. Standing at its summit, the polar
+                        bear is a solitary hunter with a keen sense of smell and astonishing
+                        patience. Catching the scent of a seal's breathing hole kilometers away,
+                        waiting in silence and letting not a moment's opening slip by — in that
+                        figure lies the overwhelming stillness and beauty that only those who have
+                        survived a harsh world possess.
+                    </p>
+                    <p class="page-section__text">
+                        Even at our poolside and rocks, the sharp gaze that suddenly fixes on the
+                        distance still carries the vivid air of the wild, roaming the vast ice
+                        fields of the Arctic. Simply standing there, it radiates a presence that
+                        overwhelms all who watch.
+                    </p>
+                </div>
+                <img src="../images/polarbear01.webp" alt="" class="page-section__figure" />
+            </section>
+
+            <section class="page-section page-section--media page-section--reverse">
+                <div class="page-section__body">
+                    <h2 class="page-section__title">A Body Built to Endure the Cold</h2>
+                    <p class="page-section__text">
+                        The reason they don't freeze even in sub-zero seas or blizzards is that
+                        their bodies are perfectly adapted to the extreme cold. Beneath the white
+                        fur covering the whole body lies a thick layer of subcutaneous fat, shutting
+                        out the outside air while firmly protecting body heat.
+                    </p>
+                    <p class="page-section__text">
+                        In fact, each strand of white fur is transparent, appearing to shine white
+                        by scattering light. And the skin beneath is, surprisingly, jet black —
+                        hidden in this body is an intricate cold-weather system nature has crafted
+                        to absorb the sun's warmth efficiently.
+                    </p>
+                </div>
+                <img src="../images/polarbear02.webp" alt="" class="page-section__figure" />
+            </section>
+
+            <section class="page-section page-section--media">
+                <div class="page-section__body">
+                    <h2 class="page-section__title">Swimming the Sea</h2>
+                    <p class="page-section__text">
+                        A ruler of the land, yet the polar bear is also a superb swimmer. Now and
+                        then it glides through the water of the glass-walled pool, so light and
+                        graceful that it seems impossible for such a heavy, massive body.
+                    </p>
+                    <p class="page-section__text">
+                        Using its large forepaws like oars, it can swim dozens of kilometers across
+                        cold waters — for them, the sea is a hunting ground and a part of life. The
+                        relaxed expression it shows underwater, and the moment it dives in
+                        dynamically amid a spray of water, are the very highlights that hold
+                        visitors' eyes.
+                    </p>
+                </div>
+                <img src="../images/polarbear03.webp" alt="" class="page-section__figure" />
+            </section>
+
+            <section class="page-section page-section--media page-section--reverse">
+                <div class="page-section__body">
+                    <h2 class="page-section__title">Together with the Melting Ice</h2>
+                    <p class="page-section__text">
+                        The powerful, beautiful figure of the polar bear that we witness. Yet at the
+                        northern edge of the earth where they live, the sea ice that should be
+                        beneath their feet is being lost year by year through the effects of
+                        warming. Without ice, they lose their hunting grounds — the reality that
+                        survival becomes difficult lies right there.
+                    </p>
+                    <p class="page-section__text">
+                        Meeting a polar bear at this zoo is not merely gazing at a rare animal. It
+                        is to reflect on the earth's environment and the shape of its future, which
+                        lie behind the life of the one before you. The figure swimming in the
+                        northern sea poses an important question to us.
+                    </p>
+                </div>
+                <img src="../images/polarbear04.webp" alt="" class="page-section__figure" />
+            </section>
+        </main>
+
+        <dialog id="ticket-dialog" class="ticket-dialog">
+            <button
+                class="ticket-dialog__close"
+                command="close"
+                commandfor="ticket-dialog"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+            <h2 class="ticket-dialog__title">Buy Tickets</h2>
+            <p class="ticket-dialog__note">Please select the number of tickets.</p>
+
+            <div class="ticket-dialog__rows">
+                <div class="ticket-row">
+                    <span class="ticket-row__name">Adult (high school and over)</span>
+                    <span class="ticket-row__price">¥1,000</span>
+                    <input
+                        class="ticket-row__qty"
+                        type="number"
+                        min="0"
+                        value="0"
+                        data-price="1000"
+                    />
+                </div>
+                <div class="ticket-row">
+                    <span class="ticket-row__name">Child (elementary/junior high)</span>
+                    <span class="ticket-row__price">¥400</span>
+                    <input
+                        class="ticket-row__qty"
+                        type="number"
+                        min="0"
+                        value="0"
+                        data-price="400"
+                    />
+                </div>
+            </div>
+
+            <p class="ticket-dialog__total">Total: ¥<span id="ticket-total">0</span></p>
+
+            <button class="ticket-dialog__submit" type="button">Proceed to checkout</button>
+        </dialog>
+
+        <!-- ===== Companion bear (shared across pages) ===== -->
+        <a class="bear" href="#top" aria-label="Return to top of page">
+            <img src="../images/polarbear.svg" alt="" class="bear__img" />
+            <span class="bear__label">TOP ↑</span>
+        </a>
+
+        <footer class="footer">
+            <p class="footer__copy">&copy; Hokkaido ○○ Zoo</p>
+            <p class="footer__note">All images on this site are AI-generated.</p>
+        </footer>
+
+        <script src="../js/main.js"></script>
+    </body>
+</html>
