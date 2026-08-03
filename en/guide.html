@@ -25,7 +25,11 @@
         <header class="header">
             <a class="header__logo" href="index.html">
                 <span class="header__logo-mark" aria-hidden="true">
-                    <img src="../images/polarbear.svg" alt="Hokkaido ○○ Zoo" class="header__logo-img" />
+                    <img
+                        src="../images/polarbear.svg"
+                        alt="Hokkaido ○○ Zoo"
+                        class="header__logo-img"
+                    />
                 </span>
                 <span class="header__logo-text">Hokkaido ○○ Zoo</span>
             </a>
@@ -36,11 +40,7 @@
                     Tickets
                 </button>
                 <a class="header__lang" href="../guide.html">JP</a>
-                <button
-                    class="header__theme"
-                    type="button"
-                    aria-label="テーマを切り替え"
-                >
+                <button class="header__theme" type="button" aria-label="テーマを切り替え">
                     <span class="header__theme-icon" aria-hidden="true">◐</span>
                 </button>
                 <button
@@ -58,7 +58,7 @@
 
             <nav class="header__nav" id="global-nav">
                 <ul class="header__menu">
-                    <li class="header__item"><a href="guide.html">Visit</a></li>
+                    <li class="header__item"><a href="guide.html" aria-current="page">Visit</a></li>
                     <li class="header__item"><a href="index.html#animals">Animals</a></li>
                     <li class="header__item"><a href="ecology.html">Animal Life</a></li>
                     <li class="header__item"><a href="mission.html">Mission</a></li>
@@ -73,7 +73,8 @@
                 <div class="page-head__body">
                     <h1 class="page-head__title">Visit</h1>
                     <p class="page-head__lead">
-                        Everything you need to prepare for a quiet encounter with the animals, amid the crisp air of the north.
+                        Everything you need to prepare for a quiet encounter with the animals, amid
+                        the crisp air of the north.
                     </p>
                 </div>
             </section>
@@ -83,7 +84,10 @@
                 <div class="page-section__body">
                     <h2 class="page-section__title">Hours & Closing Days</h2>
                     <p class="page-section__text">
-                        As the seasons turn, the animals' expressions and active hours shift little by little. The quiet of a clear morning, or the animals resting in the soft light before dusk — every visit brings something new. Please come with a relaxed schedule to match your plans.
+                        As the seasons turn, the animals' expressions and active hours shift little
+                        by little. The quiet of a clear morning, or the animals resting in the soft
+                        light before dusk — every visit brings something new. Please come with a
+                        relaxed schedule to match your plans.
                     </p>
                     <dl class="info-list">
                         <div class="info-list__item">
@@ -110,7 +114,9 @@
                 <div class="page-section__body">
                     <h2 class="page-section__title">Admission</h2>
                     <p class="page-section__text">
-                        Tickets can be bought at the gate, or in advance from your smartphone as web tickets. Web tickets let you pass through the gate smoothly on the day — ideal for a weekend outing or a family visit.
+                        Tickets can be bought at the gate, or in advance from your smartphone as web
+                        tickets. Web tickets let you pass through the gate smoothly on the day —
+                        ideal for a weekend outing or a family visit.
                     </p>
                     <table class="fee-table">
                         <thead>
@@ -139,7 +145,8 @@
                         </tbody>
                     </table>
                     <p class="page-section__note">
-                        Visitors with a disability certificate and one accompanying carer are admitted free. Please show it at the reception.
+                        Visitors with a disability certificate and one accompanying carer are
+                        admitted free. Please show it at the reception.
                     </p>
                 </div>
                 <img src="../images/guide2.webp" alt="" class="page-section__figure" />
@@ -150,14 +157,20 @@
                 <div class="page-section__body">
                     <h2 class="page-section__title">Park Map</h2>
                     <p class="page-section__text">
-                        The park is divided into four main areas, laid out with room to breathe and designed to echo the northern landscape. There's no need to rush and see every animal. Listen to the rustling trees and the breath of the animals, stop where you like, and stroll at your own pace.
+                        The park is divided into four main areas, laid out with room to breathe and
+                        designed to echo the northern landscape. There's no need to rush and see
+                        every animal. Listen to the rustling trees and the breath of the animals,
+                        stop where you like, and stroll at your own pace.
                     </p>
                 </div>
                 <img src="../images/guide3.webp" alt="" class="page-section__figure" />
             </section>
 
-            <!-- ===== Park map image (full width, outside section) ===== -->
-            <img src="../images/park-map.webp" alt="Park map" class="park-map" />
+            <!-- ===== Park map image ===== -->
+            <a href="../images/park-map.webp" target="_blank" rel="noopener">
+                <img src="../images/park-map.webp" alt="Park map" class="park-map" />
+            </a>
+            <p class="park-map__note">Click the image to open a larger view in a new tab.</p>
         </main>
 
         <dialog id="ticket-dialog" class="ticket-dialog">

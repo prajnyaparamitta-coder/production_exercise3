@@ -145,6 +145,11 @@ main > section,
     color: var(--accent-color);
 }
 
+.header__item a[aria-current="page"] {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
 .header__actions {
     display: flex;
     align-items: center;
@@ -666,6 +671,16 @@ html {
     width: 100%;
     height: auto;
     margin-block-start: 2rem;
+}
+
+.park-map__note {
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-block: 1rem 2.5rem;
+    padding-inline: 1.5rem;
+    color: var(--text-sub-color);
+    font-size: 0.9rem;
+    text-align: center;
 }
 
 .ticket-dialog {
