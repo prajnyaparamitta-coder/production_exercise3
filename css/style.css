@@ -1,10 +1,12 @@
 @charset "UTF-8";
 
 /* ===== カスタムプロパティ ===== */
+/* --bear-x を「長さかパーセント」型の変数として登録する宣言。
+通常のCSS変数（--x: 0）はただの文字列なので、アニメーションで滑らかに補間できない。@property で型（syntax）を与えて初めて、0% → 100vw の途中の値が計算され、なめらかに動く。*/
 @property --bear-x {
     syntax: "<length-percentage>";
-    inherits: false;
-    initial-value: 0%;
+    inherits: false; /* 子要素に継承させない */
+    initial-value: 0%; /* 初期位置（左端） */
 }
 
 /* ページ遷移アニメーション */
@@ -12,14 +14,18 @@
     navigation: auto;
 }
 
+/* ::view-transition-old(root) = 出ていく（古い）ページ全体を指す擬似要素。root はページ全体。
+vt-slide-out アニメーションを 0.45秒・easeで適用。bothで前後の状態を保持 */
 ::view-transition-old(root) {
     animation: 0.45s ease both vt-slide-out;
 }
 
+/* ::view-transition-new(root) = 入ってくる（新しい）ページ全体 */
 ::view-transition-new(root) {
     animation: 0.45s ease both vt-slide-in;
 }
 
+/* 出ていくページの動き。左へ40pxスライドしながら透明になって消える */
 @keyframes vt-slide-out {
     to {
         transform: translateX(-40px);
@@ -27,6 +33,7 @@
     }
 }
 
+/* 入ってくるページの動き。右から40pxの位置・透明の状態から、元の位置・不透明へ */
 @keyframes vt-slide-in {
     from {
         transform: translateX(40px);
@@ -37,7 +44,7 @@
 @font-face {
     font-family: "07にくまるフォント";
     src: url("../fonts/07にくまるフォント.otf") format("opentype");
-    font-display: swap;
+    font-display: swap; /* フォント読み込み中は代替フォントで先に表示し、読み込めたら差し替える設定 */
 }
 
 :root {
@@ -113,7 +120,7 @@ main > section,
 
 .header__logo-img {
     display: block;
-    width: 48px; /* 仮。実物を見て調整 */
+    width: 48px;
     height: auto;
 }
 
@@ -123,10 +130,12 @@ main > section,
     letter-spacing: 0.05em;
     color: var(--accent-color);
     font-family: "07にくまるフォント", "Noto Sans JP", sans-serif;
+    white-space: nowrap;
 }
 
+/* HTMLの記述順はロゴ→アクション→ナビだが、広い画面で、ロゴ(order:0) → ナビ(order:1) → アクション(order:2) の順に横並びにするため */
 .header__nav {
-    order: 2;
+    order: 1;
 }
 
 .header__menu {
@@ -139,12 +148,15 @@ main > section,
     font-size: 1.15rem;
     font-weight: 500;
     color: var(--text-sub-color);
+    white-space: nowrap;
 }
 
+/* ホバーでアクセント色に */
 .header__item a:hover {
     color: var(--accent-color);
 }
 
+/* 今いるページのナビ項目の色と太さを変えて現在地を示す。HTMLの aria-current="page" が付いた項目に効かせる */
 .header__item a[aria-current="page"] {
     color: var(--accent-color);
     font-weight: 700;
@@ -154,7 +166,7 @@ main > section,
     display: flex;
     align-items: center;
     gap: 1rem;
-    order: 3; /* 広い画面ではナビの右へ */
+    order: 2; /* 広い画面ではナビ(order:1)より大きい値にして後ろ（右端）へ */
 }
 
 .header__ticket {
@@ -167,12 +179,15 @@ main > section,
 .header__theme {
     border: none;
     background: none;
+    /* ボタンの既定の枠と背景を消し、アイコンだけの見た目にする */
+
     font-size: 1.25rem;
     line-height: 1;
     cursor: pointer;
     color: var(--text-color);
 }
 
+/* ホバーで濃いアクセント色に */
 .header__ticket:hover {
     background-color: var(--accent-dark-color);
 }
@@ -180,7 +195,7 @@ main > section,
 /* ハンバーガーボタン。広い画面では隠す */
 .header__toggle {
     display: none;
-    flex-direction: column;
+    flex-direction: column; /* 3本線を縦に積むため縦方向のflex */
     justify-content: center;
     gap: 5px;
     width: 44px;
@@ -191,6 +206,7 @@ main > section,
     cursor: pointer;
 }
 
+/* 各線を block 化して幅・高さを持たせる */
 .header__toggle-bar {
     display: block;
     width: 24px;
@@ -232,7 +248,7 @@ main > section,
 .info-bar__hours {
     display: inline-flex;
     align-items: center;
-    height: 3rem;
+    min-height: 3rem;
     margin: 0;
     padding-inline: 1.25rem;
     font-size: 1.25rem;
@@ -265,48 +281,50 @@ main > section,
     background-color: var(--accent-dark-color);
 }
 
-/* ===== 型A：画像とカードの重ね（来園案内・暮らし） ===== */
+/* ===== 画像とカードを重ねる（来園案内・動物たちの暮らし） ===== */
 .feature {
     display: grid;
+    /* グリッドにして、画像とカードを同じ領域に配置。フレックスではなくグリッドを使うのは、画像とカードを同じ行・同じ列に置いて重ねたいため */
     grid-template-columns: 1fr 1fr;
     align-items: center;
 }
 
 .feature__media {
-    grid-column: 1 / 3;
+    grid-column: 1 / 3; /* 画像を1列目から3本目の線まで＝2列ぶん全幅に広げる */
     grid-row: 1;
 }
 
 .feature__img {
     display: block;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 9; /* 画像の縦横比を16:9に固定 */
     object-fit: cover;
     border-radius: 1rem;
 }
 
 .feature__card {
-    grid-column: 2 / 3;
+    grid-column: 2 / 3; /* カードを右半分（2列目）に置く */
     grid-row: 1;
-    z-index: 1;
-    justify-self: end;
-    translate: 2rem 0; /* 画像の外側へ少しはみ出す */
+    z-index: 1; /* 重なり順を画像より前に */
+    justify-self: end; /* 自分の列の中で右端に寄せる */
+    translate: 2rem 0; /* さらに右へ2rem動かし、画像の外側へ少しはみ出す */
     background-color: var(--card-color);
     border-radius: 1rem;
     padding: 2.5rem;
-    box-shadow: 0 4px 24px rgb(0 0 0 / 0.12);
+    box-shadow: 0 8px 24px rgb(0 0 0 / 0.35); /* 影で重なりを強調 */
 }
 
 .feature--reverse .feature__card {
-    grid-column: 1 / 2;
-    justify-self: start;
-    translate: -2rem 0;
+    grid-column: 1 / 2; /* カードを左（1列目）へ。左右を反転させたレイアウト。来園案内と左右対称にする */
+    justify-self: start; /* 自分の列の中で左端に寄せる */
+    translate: -2rem 0; /* 左へ2rem動かし、画像の左側へはみ出させる */
 }
 
 .feature__text {
     color: var(--text-sub-color);
 }
 
+/* リンクボタン */
 .feature__link {
     display: inline-block;
     margin-block-start: 1.5rem;
@@ -357,8 +375,9 @@ main > section,
 .species-table {
     width: 100%;
     max-width: 640px;
+    /* テーブルを親要素の幅いっぱいに広げる。ただし最大640pxまで */
     margin-block-start: 1.5rem;
-    border-collapse: collapse;
+    border-collapse: collapse; /* 隣り合うセルの境界線を1本に重ねる */
 }
 
 .species-table th,
@@ -373,7 +392,7 @@ main > section,
     width: 8rem;
     background-color: var(--sub-color);
     font-weight: 700;
-    white-space: nowrap;
+    white-space: nowrap; /* 見出し(「生態・特徴」など)を途中で改行させない */
 }
 
 .species-table td {
@@ -447,23 +466,27 @@ main > section,
     opacity: 0.7;
 }
 
-/* ===== 同行クマ（スクロール連動） ===== */
+/* ===== クマ（スクロール連動） ===== */
 .bear {
     position: fixed;
     bottom: 2rem;
     left: 0;
     z-index: 100; /* 常に最前面 */
-    width: 80px; /* 仮。SVG実物を見て調整 */
-    animation: bear-cross linear;
-    animation-timeline: scroll(root block); /* ページ全体の縦スクロール進捗 */
-    transform: translateX(var(--bear-x));
+    width: 80px;
+    animation: bear-cross linear; /* クマ(bear)が横断(cross)するアニメーション。linearは、スクロール量とクマの位置を比例させるため。 */
+    animation-timeline: scroll(
+        root block
+    ); /* ページ全体の縦スクロール進捗。最上部で0%、最下部で100%。 */
+    transform: translateX(
+        var(--bear-x)
+    ); /* --bear-x（@propertyで型宣言した変数）を実際の横移動に反映。変数の値が変わると、その値ぶんクマが右へ動く */
 }
 
 .bear__label {
     position: absolute;
     bottom: 100%;
     left: 50%;
-    translate: -50% 0;
+    translate: -50% 0; /* 「TOP ↑」をクマの横幅の中央に揃える。left:50%だけだと左端が中央に来てしまうので、自分の幅の半分を戻して中央寄せ */
     display: inline-block;
     background-color: var(--accent-color);
     color: var(--card-color);
@@ -471,7 +494,7 @@ main > section,
     font-size: 0.75rem;
     padding: 0.2rem 0.6rem;
     border-radius: 999px;
-    white-space: nowrap;
+    white-space: nowrap; /* 「TOP ↑」が2行になるのを防ぐ */
     box-shadow: 0 2px 6px rgb(0 0 0 / 0.2);
 }
 
@@ -481,12 +504,15 @@ main > section,
     height: auto;
 }
 
+/* アニメーションの途中経過の状態を定義。スクロール0%地点で --bear-x = 0%（左端）、100%地点で画面右端へ。 */
 @keyframes bear-cross {
     from {
         --bear-x: 0%;
     }
     to {
-        --bear-x: calc(100vw - 100%); /* 最下部で右端 */
+        --bear-x: calc(
+            100vw - 100%
+        ); /* 100vw = 画面の横幅、100% = クマ自身の幅。画面幅ちょうどまで動かすとクマが画面外へはみ出すので、自分の幅を引いて、右端でクマ全体が画面内に収まるようにする */
     }
 }
 
@@ -512,6 +538,7 @@ html {
     padding: 2.5rem 1.5rem 0;
 }
 
+/* 狭い画面では最低1.75rem、広い画面では最大2.75rem、中間では画面幅に比例して伸縮 */
 .page-head__title {
     font-size: clamp(1.75rem, 4vw, 2.75rem);
 }
@@ -533,11 +560,12 @@ html {
 .page-section__title,
 .animals__title,
 .mission__title {
-    position: relative;
-    padding-block-end: 0.75rem;
-    animation: title-color linear both;
-    animation-timeline: view();
+    position: relative; /* 疑似要素(::after)をこの見出しを基準に絶対配置するための土台 */
+    padding-block-end: 0.75rem; /* 下線を引くスペース */
+    animation: title-color linear both; /* 見出し文字のアニメーション。linearで等速、bothで前後の状態を保持 */
+    animation-timeline: view(); /* アニメーションの進行をスクロール位置に連動 */
     animation-range: entry 60% cover 50%;
+    /* 要素が60%画面に入った時点でアニメーションの開始。要素が画面中央に来た時に終了 */
 }
 
 .page-section__title::after,
@@ -551,29 +579,21 @@ html {
     height: 4px;
     border-radius: 2px;
     background-color: var(--title-effect-color);
+
+    /* 横方向の拡大率を0にする＝最初は幅ゼロで見えない。ここから scaleX を1まで動かして、線を左から引く */
     transform: scaleX(0);
     transform-origin: left;
-    animation: underline-draw linear both;
+    animation: underline-draw linear both; /* 下線を引くアニメーションをスクロール連動で */
     animation-timeline: view();
     animation-range: entry 60% cover 50%;
 }
 
+/* 下線のアニメーション本体。scaleX を 0→1 に変える。fromを省略して、要素の初期値 scaleX(0)が開始、scaleX(1)が終了 */
 @keyframes underline-draw {
     to {
         transform: scaleX(1);
     }
 }
-
-/* 下線を引く→引き終わりで見出し文字色がアクセント色に変わる */
-/* @keyframes title-color {
-    0%,
-    70% {
-        color: var(--text-color);
-    }
-    100% {
-        color: var(--accent-color);
-    }
-} */
 
 .page-section__text {
     color: var(--text-sub-color);
@@ -598,7 +618,7 @@ html {
     padding-block-start: 0;
 }
 
-/* ===== 定義リスト（来園案内・アクセスなど） ===== */
+/* ===== 定義リスト（来園案内） ===== */
 .info-list {
     margin-block-start: 1.5rem;
 }
@@ -686,11 +706,13 @@ html {
 .ticket-dialog {
     max-width: 480px;
     width: calc(100% - 2rem);
+    /* 画面幅から左右1remずつ引いた幅。max-width と併用して、「画面いっぱいまで、ただし480pxを上限に」 */
     border: none;
     border-radius: 1rem;
     padding: 2rem;
 }
 
+/* モーダルダイアログが開いたときに、後ろのページを暗くする */
 .ticket-dialog::backdrop {
     background-color: rgb(0 0 0 / 0.5);
 }
@@ -713,6 +735,7 @@ html {
     margin-block-end: 1.5rem;
 }
 
+/* 券種名・価格・数量入力を横一列に並べるグリッド */
 .ticket-row {
     display: grid;
     grid-template-columns: 1fr auto 4rem;
@@ -778,7 +801,7 @@ html {
 
 /* ===== レスポンシブ ===== */
 @media (width < 900px) {
-    /* 型A：重ねを解除して縦積み */
+    /* 画像とカードの重なりを解除して縦積みに */
     .feature {
         grid-template-columns: 1fr;
     }
@@ -815,9 +838,9 @@ html {
         display: flex;
     }
 
-    /* ナビを畳む */
     .header__nav {
-        order: 4;
+        order: 3;
+        /* ハンバーガーメニューを開いたとき、チケット・EN・テーマ・×が上に表示されるようにheader__actionsのorder:2より大きい値に */
         width: 100%;
         display: none;
     }
@@ -876,6 +899,8 @@ html {
         gap: 1.5rem;
     }
 
+    /* 狭い画面では縦積みにするため、左右反転（order:2）を order:0 に戻し、
+   常に画像→テキストの順に統一する */
     .page-section--reverse .page-section__body {
         order: 0;
     }

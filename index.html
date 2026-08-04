@@ -34,7 +34,9 @@
                 <span class="header__logo-text">北海道○○動物園</span>
             </a>
 
+            <!-- 右側の操作ボタン（チケット・言語・テーマ・ハンバーガー）をまとめる箱 -->
             <div class="header__actions">
+                <!-- チケットボタン。commandfor="ticket-dialog" で「id=ticket-dialog」を対象に、command="show-modal" で「モーダルとして開け」という命令。 -->
                 <button class="header__ticket" commandfor="ticket-dialog" command="show-modal">
                     チケット
                 </button>
@@ -42,6 +44,8 @@
                 <button class="header__theme" type="button" aria-label="テーマを切り替え">
                     <span class="header__theme-icon" aria-hidden="true">◐</span>
                 </button>
+
+                <!-- ハンバーガーボタン -->
                 <button
                     class="header__toggle"
                     type="button"
@@ -49,12 +53,14 @@
                     aria-expanded="false"
                     aria-controls="global-nav"
                 >
+                <!-- 3本線を3つの span で作る -->
                     <span class="header__toggle-bar"></span>
                     <span class="header__toggle-bar"></span>
                     <span class="header__toggle-bar"></span>
                 </button>
             </div>
 
+            <!-- グローバルナビ。id="global-nav" は上の aria-controls と対応 -->
             <nav class="header__nav" id="global-nav">
                 <ul class="header__menu">
                     <li class="header__item"><a href="guide.html">来園案内</a></li>
@@ -100,6 +106,7 @@
 
             <!-- ===== 来園案内（実務情報・短い導入＋別ページへ） ===== -->
             <section class="guide feature" id="guide">
+                <!-- feature は、画像の上にテキストのカードを少し重ねて配置する共通のレイアウト。来園案内と「動物たちの暮らし」の2か所で使用。 -->
                 <div class="feature__media">
                     <img src="images/guide.webp" alt="" class="feature__img" />
                 </div>
@@ -196,6 +203,7 @@
             </section>
         </main>
 
+        <!-- チケット購入画面をモーダル（ポップアップ）で表示 -->
         <dialog id="ticket-dialog" class="ticket-dialog">
             <button
                 class="ticket-dialog__close"
@@ -209,6 +217,7 @@
             <h2 class="ticket-dialog__title">チケット購入</h2>
             <p class="ticket-dialog__note">ご希望の枚数を選択してください。</p>
 
+            <!-- 券種ごとの行をまとめる箱 -->
             <div class="ticket-dialog__rows">
                 <div class="ticket-row">
                     <span class="ticket-row__name">大人（高校生以上）</span>
@@ -217,9 +226,11 @@
                         class="ticket-row__qty"
                         type="number"
                         min="0"
-                        value="0"
+                        placeholder="0"
                         data-price="1000"
                     />
+                    <!-- 数量入力。type="number" で数値専用、min="0" で0未満を禁止。placeholder="0"で、空欄のとき薄く「0」を表示。
+                    data-price="1000" は、この券種の単価をJSに渡す入れ物。JSは data-price と入力値を掛けて合計を出す -->
                 </div>
                 <div class="ticket-row">
                     <span class="ticket-row__name">小・中学生</span>
@@ -228,25 +239,27 @@
                         class="ticket-row__qty"
                         type="number"
                         min="0"
-                        value="0"
+                        placeholder="0"
                         data-price="400"
                     />
                 </div>
             </div>
 
             <p class="ticket-dialog__total">合計：<span id="ticket-total">0</span>円</p>
-
+            <!-- 合計表示。id="ticket-total" の span の中身をJSが計算 -->
             <button class="ticket-dialog__submit" type="button">購入手続きへ進む</button>
         </dialog>
 
         <!-- ===== クマ（ページ全体のスクロール進捗に連動して左端→右端を横断） ===== -->
-        <!-- どの特定セクションにも属さない。scroll() タイムラインでページ全体を 0〜100% とする -->
         <a class="bear" href="#top" aria-label="ページトップへ戻る">
+            <!-- href="#top" と id="top"（body側）で、クリック時にページ先頭へ戻るアンカーを兼ねる -->
+            <!-- aria-label はスクリーンリーダー向けの説明 -->
             <img src="images/polarbear.svg" alt="" class="bear__img" />
+            <!-- alt="" は、リンクの意味はaria-labelが担うので、空にして読み上げの重複を防ぐ -->
             <span class="bear__label">TOP ↑</span>
         </a>
 
-        <!-- ===== アクセス（フッター直前・セクションで完結） ===== -->
+        <!-- ===== アクセス ===== -->
         <section class="access">
             <h2 class="access__title">アクセス</h2>
             <p class="access__text">〒000-0000 北海道○○市○○1丁目1番地</p>
