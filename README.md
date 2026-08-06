@@ -118,7 +118,7 @@ View Transitions API（`@view-transition`）により、ページ間の移動に
 - `<dialog>` + `command` / `commandfor` によるモーダル
 - Swiper（ヒーローのカルーセル）
 
-JavaScript は、ハンバーガーメニューの開閉、チケット合計金額の計算、テーマの手動トグルに使用。
+JavaScript は、ハンバーガーメニューの開閉、チケット合計金額の計算、テーマの手動トグル、マスコットのセリフ表示に使用。
 
 ---
 
