@@ -40,11 +40,7 @@
                     Tickets
                 </button>
                 <a class="header__lang" href="../penguin.html">JP</a>
-                <button
-                    class="header__theme"
-                    type="button"
-                    aria-label="テーマを切り替え"
-                >
+                <button class="header__theme" type="button" aria-label="テーマを切り替え">
                     <span class="header__theme-icon" aria-hidden="true">◐</span>
                 </button>
                 <button
@@ -63,7 +59,9 @@
             <nav class="header__nav" id="global-nav">
                 <ul class="header__menu">
                     <li class="header__item"><a href="guide.html">Visit</a></li>
-                    <li class="header__item"><a href="index.html#animals" aria-current="page">Animals</a></li>
+                    <li class="header__item">
+                        <a href="index.html#animals" aria-current="page">Animals</a>
+                    </li>
                     <li class="header__item"><a href="ecology.html">Animal Life</a></li>
                     <li class="header__item"><a href="mission.html">Mission</a></li>
                 </ul>
@@ -245,6 +243,18 @@
             <img src="../images/polarbear.svg" alt="" class="bear__img" />
             <span class="bear__label">TOP ↑</span>
         </a>
+
+        <!-- ===== 動物豆知識 ===== -->
+        <section
+            class="animal-trivia"
+            data-messages='["We have no teeth, but the inside of our mouths is covered in spiky ridges"]'
+        >
+            <button class="animal-trivia__button" type="button">Penguin trivia</button>
+            <div class="animal-trivia__box">
+                <img src="../images/penguin_mascot.webp" alt="" class="animal-trivia__img" />
+                <p class="animal-trivia__message"></p>
+            </div>
+        </section>
 
         <footer class="footer">
             <p class="footer__copy">&copy; Hokkaido ○○ Zoo</p>

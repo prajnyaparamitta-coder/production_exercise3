@@ -45,3 +45,19 @@ function updateTotal() {
 qtyInputs.forEach((input) => {
     input.addEventListener("input", updateTotal);
 });
+
+// マスコットのひとこと／動物豆知識（トップと動物個別ページで共通）
+const talkSection = document.querySelector(".mascot-talk, .animal-trivia");
+
+if (talkSection) {
+    const talkButton = talkSection.querySelector(".mascot-talk__button, .animal-trivia__button");
+    const talkBox = talkSection.querySelector(".mascot-talk__box, .animal-trivia__box");
+    const talkMessage = talkSection.querySelector(".mascot-talk__message, .animal-trivia__message");
+    const messages = JSON.parse(talkSection.dataset.messages);
+
+    talkButton.addEventListener("click", () => {
+        const index = Math.floor(Math.random() * messages.length);
+        talkMessage.textContent = messages[index];
+        talkBox.classList.add("is-show");
+    });
+}

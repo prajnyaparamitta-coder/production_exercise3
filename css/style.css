@@ -779,6 +779,91 @@ html {
     background-color: var(--accent-dark-color);
 }
 
+/* ===== マスコットのひとこと／動物豆知識 ===== */
+/* トップページのクマ(mascot-talk)と、動物個別ページの豆知識(animal-trivia)は
+   構造・見た目が同じ、スタイルを共通化 */
+.mascot-talk,
+.animal-trivia {
+    text-align: center;
+}
+
+.mascot-talk__button,
+.animal-trivia__button {
+    padding: 0.7rem 1.6rem;
+    border: none;
+    border-radius: 999px;
+    background-color: var(--accent-color);
+    color: var(--card-color);
+    font-family: "07にくまるフォント", "Noto Sans JP", sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.mascot-talk__button:hover,
+.animal-trivia__button:hover {
+    background-color: var(--accent-dark-color);
+}
+
+/* 普段は透明で下にずらしておく。is-show が付くと元の位置へ戻り、ぴょこんと現れる */
+.mascot-talk__box,
+.animal-trivia__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin-block-start: 1.5rem;
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+        opacity 0.4s,
+        transform 0.4s;
+    /* 隠れている間はクリックを受け付けない */
+    pointer-events: none;
+}
+
+.mascot-talk__box.is-show,
+.animal-trivia__box.is-show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.mascot-talk__img,
+.animal-trivia__img {
+    display: block;
+    width: 100px;
+    height: auto;
+}
+
+/* セリフを吹き出し風に */
+.mascot-talk__message,
+.animal-trivia__message {
+    position: relative;
+    max-width: 32rem;
+    margin-inline: auto;
+    padding: 1rem 1.5rem;
+    background-color: var(--card-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 1rem;
+    font-family: "07にくまるフォント", "Noto Sans JP", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+/* 吹き出しの三角（上向き、動物の方を指す） */
+.mascot-talk__message::before,
+.animal-trivia__message::before {
+    content: "";
+    position: absolute;
+    inset-block-end: 100%;
+    inset-inline-start: 50%;
+    translate: -50% 0;
+    border: 10px solid transparent;
+    border-block-end-color: var(--accent-color);
+}
+
 /* スクロールで浮かび上がる要素 */
 .page-section,
 .feature,
